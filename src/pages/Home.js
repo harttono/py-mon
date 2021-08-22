@@ -5,9 +5,9 @@ import { useGlobalContext } from "../context/Context";
 function Home() {
   const { handleLimit, data } = useGlobalContext();
   return (
-    <div className="container">
+    <div className="container pt-2">
       <ListItem />
-      <div className="d-flex justify-content-end mt-3">
+      <div className="d-flex justify-content-end mt-2">
         {data && data.length > 0 && (
           <button type="submit" className="btn btn-primary text-left" onClick={handleLimit}>
             Load More
