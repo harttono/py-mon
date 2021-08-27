@@ -1,27 +1,36 @@
 const reducer = (state, action) => {
   switch (action.type) {
-    case "SET_LOADING":
-      console.log("loadinggggggggggggg");
+    case "LOGIN":
       return {
         ...state,
-        loading: action.loading,
+        userData: action.dataLogin,
+      };
+    case "REGISTER":
+      return {
+        ...state,
+        userData: action.dataRegister,
+      };
+    case "LOADING":
+      console.log("itu", action.payload);
+      return {
+        ...state,
+        loading: true,
+      };
+    case "LOGOUT":
+      return {
+        ...state,
+        userData: null,
       };
     case "GET_ERROR":
       return {
         ...state,
-        loading: action.loading,
-        err: action.err,
+        err: action.payload,
       };
     case "GET_DATA":
       return {
         ...state,
         loading: false,
         data: action.payload,
-      };
-    case "OPEN_MODAL":
-      return {
-        ...state,
-        showModal: true,
       };
     case "UPDATE_LIMIT":
       return {

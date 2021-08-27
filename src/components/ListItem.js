@@ -11,10 +11,10 @@ function ListItem() {
       <div className="row">
         {data
           ? data.map((item, index) => (
-              <div className="col-lg-3" key={index}>
+              <div className="col-lg-3 col-md-4 col-sm-4 col-xs-6" key={index}>
                 <Fade top>
                   <div className="m-2 border border-secondary border-1 rounded-2 bg-light">
-                    <img src={item.sprites.back_default} className="card-img-top" alt="pict-of-pokemon" />
+                    <img src={item.imgBackDefault} className="card-img-top" alt="pict-of-pokemon" />
                   </div>
                   <DetailModal key={index} detail={item} />
                 </Fade>
